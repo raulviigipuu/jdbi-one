@@ -1,2 +1,9 @@
 # jdbi-one
-Testing out jdbi library
+
+Testing out the JDBI library
+
+## Commands
+
+    ./gradlew dependencyUpdates
+
+    ./gradlew run
