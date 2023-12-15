@@ -1,6 +1,6 @@
 # jdbi-one
 
-Playground for JDBI library
+Testing out the JDBI library
 
 ## Commands
 

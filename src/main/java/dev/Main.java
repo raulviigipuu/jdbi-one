@@ -3,6 +3,7 @@ package dev;
 import dev.model.BlogPost;
 import dev.model.Comment;
 import dev.service.BlogService;
+import lombok.extern.slf4j.Slf4j;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 
@@ -10,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
+@Slf4j
 public class Main {
 
     public static void main(String[] args) {
@@ -37,11 +39,11 @@ public class Main {
 
         // Read and print the updated blog post
         BlogPost post = blogService.getBlogPost(postId);
-        System.out.println("Blog Post: " + post.getTitle() + " - " + post.getContent());
+        log.info("Blog Post: {} - {}", post.getTitle(), post.getContent());
 
         // Read and print comments
         List<Comment> comments = blogService.getComments(postId);
-        comments.forEach(comment -> System.out.println("Comment by " + comment.getAuthor() + ": " + comment.getContent()));
+        comments.forEach(comment -> log.info("Comment by {}: {}", comment.getAuthor(), comment.getContent()));
 
         // Delete a blog post
         blogService.deleteBlogPost(postId);
