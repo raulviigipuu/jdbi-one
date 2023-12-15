@@ -6,6 +6,8 @@ import dev.exception.ServiceException;
 import dev.model.BlogPost;
 import dev.model.Comment;
 import org.jdbi.v3.core.Jdbi;
+import org.jdbi.v3.core.statement.SqlLogger;
+import org.jdbi.v3.core.statement.StatementContext;
 
 import java.util.List;
 
@@ -14,6 +16,12 @@ public class BlogService {
 
     public BlogService(Jdbi jdbi) {
         this.jdbi = jdbi;
+        this.jdbi.setSqlLogger(new SqlLogger() {
+            @Override
+            public void logBeforeExecution(StatementContext context) {
+                System.out.println("Executing query: " + context.getRenderedSql());
+            }
+        });
     }
 
     // Blog Post Operations
