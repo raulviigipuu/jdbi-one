@@ -5,12 +5,14 @@ import dev.dao.CommentDao;
 import dev.exception.ServiceException;
 import dev.model.BlogPost;
 import dev.model.Comment;
+import lombok.extern.slf4j.Slf4j;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.core.statement.SqlLogger;
 import org.jdbi.v3.core.statement.StatementContext;
 
 import java.util.List;
 
+@Slf4j
 public class BlogService {
     private final Jdbi jdbi;
 
@@ -19,7 +21,7 @@ public class BlogService {
         this.jdbi.setSqlLogger(new SqlLogger() {
             @Override
             public void logBeforeExecution(StatementContext context) {
-                System.out.println("Executing query: " + context.getRenderedSql());
+                log.debug("Executing query: {}", context.getRenderedSql());
             }
         });
     }

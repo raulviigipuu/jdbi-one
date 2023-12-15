@@ -42,6 +42,11 @@ tasks.named('dependencyUpdates').configure {
     }
 }
 
+tasks.withType(JavaExec) {
+    systemProperties = ['org.slf4j.simpleLogger.defaultLogLevel': 'debug']
+}
+
+
 test {
     useJUnitPlatform()
 }
