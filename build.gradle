@@ -18,16 +18,16 @@ application {
 
 dependencies {
     implementation 'com.h2database:h2:2.2.224'
-    implementation 'org.jdbi:jdbi3-core:3.42.0'
-    implementation 'org.jdbi:jdbi3-sqlobject:3.42.0'
-    implementation 'org.slf4j:slf4j-simple:2.0.9'
+    implementation 'org.jdbi:jdbi3-core:3.44.1'
+    implementation 'org.jdbi:jdbi3-sqlobject:3.44.1'
+    implementation 'org.slf4j:slf4j-simple:2.0.12'
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.30'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
-    testImplementation platform('org.junit:junit-bom:5.10.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
 }
 
 def isNonStable = { String version ->
