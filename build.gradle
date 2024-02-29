@@ -13,7 +13,7 @@ repositories {
 }
 
 application {
-    mainClassName = 'dev.Main'
+    mainClass.set('dev.Main')
 }
 
 dependencies {
