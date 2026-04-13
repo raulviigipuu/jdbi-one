@@ -18,8 +18,8 @@ application {
 
 dependencies {
     implementation 'com.h2database:h2:2.4.240'
-    implementation 'org.jdbi:jdbi3-core:3.52.0'
-    implementation 'org.jdbi:jdbi3-sqlobject:3.52.0'
+    implementation 'org.jdbi:jdbi3-core:3.52.1'
+    implementation 'org.jdbi:jdbi3-sqlobject:3.52.1'
     implementation 'org.slf4j:slf4j-simple:2.0.17'
     compileOnly 'org.projectlombok:lombok:1.18.44'
     annotationProcessor 'org.projectlombok:lombok:1.18.44'
