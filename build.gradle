@@ -17,7 +17,7 @@ application {
 }
 
 dependencies {
-    implementation 'com.h2database:h2:2.4.240'
+    implementation 'com.h2database:h2:2.5.250'
     implementation 'org.jdbi:jdbi3-core:3.54.0'
     implementation 'org.jdbi:jdbi3-sqlobject:3.54.0'
     implementation 'org.slf4j:slf4j-simple:2.0.18'
