@@ -17,12 +17,12 @@ application {
 }
 
 dependencies {
-    implementation 'com.h2database:h2:2.4.240'
+    implementation 'com.h2database:h2:2.5.250'
     implementation 'org.jdbi:jdbi3-core:3.54.0'
     implementation 'org.jdbi:jdbi3-sqlobject:3.54.0'
-    implementation 'org.slf4j:slf4j-simple:2.0.18'
-    compileOnly 'org.projectlombok:lombok:1.18.48'
-    annotationProcessor 'org.projectlombok:lombok:1.18.48'
+    implementation 'org.slf4j:slf4j-simple:2.0.19'
+    compileOnly 'org.projectlombok:lombok:1.18.46'
+    annotationProcessor 'org.projectlombok:lombok:1.18.46'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.48'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.48'
